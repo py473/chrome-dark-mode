@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "关灯",
+  "version": "1.0.0",
+  "description": "一键切换网页暗黑模式的 Chrome 插件，完全本地运行，无需联网，保护您的隐私。",
+  "author": "py473",
+  "homepage_url": "https://github.com/py473/chrome-dark-mode",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["icons/*"],
+    "matches": ["<all_urls>"]
+  }],
+  "action": {
+    "default_icon": "icons/dark.png"
+  },
+  "icons": {
+    "16": "icons/dark.png",
+    "32": "icons/dark.png",
+    "48": "icons/dark.png",
+    "128": "icons/dark.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "short_name": "关灯",
+  "offline_enabled": true,
+  "incognito": "split"
+} 
